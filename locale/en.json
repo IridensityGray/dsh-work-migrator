@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Work migrator",
+    "description": "Export a development work (code, data, conversation history) as one pack, or import it on any machine and file it under a category you choose. Conversations stay usable after import.",
+    "detail": "docs/DETAIL.md"
+  }
+}
