@@ -1,0 +1,64 @@
+{
+  "name": "@iridensity_gray/dsh-work-migrator",
+  "version": "1.2.0",
+  "description": "Exports a DSH workspace with its sessions and categories as one .dsht pack, and imports it on another machine under a category you choose.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs/DETAIL.md",
+    "docs/DETAIL.zh.md",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "plugin",
+    "workspace",
+    "migration",
+    "export",
+    "import"
+  ],
+  "author": "BDJC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IridensityGray/dsh-work-migrator.git"
+  },
+  "homepage": "https://github.com/IridensityGray/dsh-work-migrator#readme",
+  "bugs": {
+    "url": "https://github.com/IridensityGray/dsh-work-migrator/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}
