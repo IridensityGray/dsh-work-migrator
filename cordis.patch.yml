@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-work-migrator
+      name: '@iridensity_gray/dsh-work-migrator'
